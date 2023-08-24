@@ -14,7 +14,7 @@ export const Memorize = () => {
             <hr />
 
             <button className='btn btn-primary' onClick={() => increment()}>+1</button>
-            <button onClick={() => { setState(!state) }}>True/false - {JSON.stringify(state)}</button>
+            <button className='btn btn-primary' onClick={() => { setState(!state) }}>True/false - {JSON.stringify(state)}</button>
         </>
     )
 }
