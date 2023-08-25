@@ -1,12 +1,11 @@
 import { Link, Navigate, Route, Routes } from "react-router-dom"
 import { HomePage, LoginPage, AboutPage, Navbar } from "./"
+import { UserProvider } from "./context/UserProvider"
 
 
 export const MainApp = () => {
     return (
-        <>
-
-
+        <UserProvider>
             <Navbar />
             <hr />
 
@@ -16,9 +15,8 @@ export const MainApp = () => {
                 <Route path="about" element={<AboutPage />} />
                 <Route path="*" element={<Navigate to="/about" />} />
 
-
             </Routes>
 
-        </>
+        </UserProvider>
     )
 }
