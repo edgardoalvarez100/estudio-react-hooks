@@ -17,6 +17,7 @@ export const TodoAdd = ({ onNewTodo }) => {
             id: new Date().getTime(),
         }
         onNewTodo(newTodo)
+        onResetForm()
     }
 
     return (
